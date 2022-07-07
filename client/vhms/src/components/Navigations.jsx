@@ -7,6 +7,8 @@ import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import SplashScreen from "../screens/SplashScreen";
 import CreateOwnerScreen from "../screens/CreateOwner";
+import CreateVehicleScreen from "../screens/CreateVehicle";
+
 
 
 
@@ -29,6 +31,7 @@ const   Navigation = () => {
                       <Stack.Screen names="Register" component={RegisterScreen} options={{headerShown:false}} />
                     </>
                 )} */}
+                <Stack.Screen name="createVehicle" component={CreateVehicleScreen} />
                 <Stack.Screen name="createOwner" component={CreateOwnerScreen} />
                  <Stack.Screen name="Login" component={LoginScreen} options={{headerShown:false}} />
                 <Stack.Screen name="Register" component={RegisterScreen} />

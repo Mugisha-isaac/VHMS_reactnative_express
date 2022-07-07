@@ -10,3 +10,9 @@ module.exports.createOwner = async(req)=>{
     await newOwner.save();
     return newOwner;
  };
+
+ module.exports.getAllOwners = async(req)=>{
+    const owners = await Owner.find();
+    if(!owners) return false;
+    return owners;
+ }
