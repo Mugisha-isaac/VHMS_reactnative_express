@@ -45,6 +45,7 @@ export const AuthProvider = ({ children }) => {
       .then((res) => {
         setIsLoading(false);
         let userInfo = res.data;
+        console.log("user info:", userInfo)
         setUserInfo(userInfo);
         AsyncStorage.setItem("userInfo", JSON.stringify(userInfo));
       })
@@ -107,6 +108,7 @@ export const AuthProvider = ({ children }) => {
         if(userInfo){
             setUserInfo(userInfo);
             setSplashLoading(false);
+            
         }
     }
     catch(e){

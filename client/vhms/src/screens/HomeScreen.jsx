@@ -4,8 +4,10 @@
     import { AuthContext } from '../context/AuthContext';
 
 
+
     const HomeScreen =  ()=>{
         const {userInfo,isLoading} = useContext(AuthContext);
+        console.log("user info: ", userInfo)
 
         return(
             <View>

@@ -19,7 +19,7 @@ const CreateVehicleScreen = () => {
   const [year, setYear] = useState(null);
   const [chasingNumber, setChasingNumber] = useState(null);
   const [owners, setOwners] = useState([]);
-  const [ownerId, setOwnerID] = useState(0);
+  const [ownerId, setOwnerID] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:3300/owner/getAll")
@@ -28,6 +28,7 @@ const CreateVehicleScreen = () => {
         setOwners(data.data);
       });
   }, [owners]);
+
 
   const { createOwner, isLoading } = useContext(AuthContext);
   return (
